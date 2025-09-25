@@ -1,8 +1,13 @@
 {
+  "functions": {
+    "api/server.js": {
+      "runtime": "@vercel/node"
+    }
+  },
   "rewrites": [
     {
       "source": "/send-location",
-      "destination": "/server.js"
+      "destination": "/api/server.js"
     },
     {
       "source": "/(.*)",
