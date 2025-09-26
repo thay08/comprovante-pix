@@ -1,23 +1,13 @@
 {
-  "builds": [
-    {
-      "src": "index.html",
-      "use": "@vercel/static-build"
-    },
-    {
-      "src": "api/server.js",
-      "use": "@vercel/node@2.0.0"
+  "functions": {
+    "api/server.js": {
+      "runtime": "@vercel/node@2.0.0"
     }
-  ],
-  "routes": [
+  },
+  "rewrites": [
     {
-      "src": "/send-location",
-      "dest": "/api/server.js",
-      "methods": ["POST"]
-    },
-    {
-      "src": "/(.*)",
-      "dest": "/index.html"
+      "source": "/send-location",
+      "destination": "/api/server.js"
     }
   ]
 }
