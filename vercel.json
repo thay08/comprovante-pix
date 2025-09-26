@@ -1,17 +1,23 @@
 {
-  "functions": {
-    "api/server.js": {
-      "runtime": "@vercel/node@2.0.0" 
-    }
-  },
-  "rewrites": [
+  "builds": [
     {
-      "source": "/send-location",
-      "destination": "/api/server.js"
+      "src": "index.html",
+      "use": "@vercel/static-build"
     },
     {
-      "source": "/(.*)",
-      "destination": "/index.html"
+      "src": "api/server.js",
+      "use": "@vercel/node@2.0.0"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/send-location",
+      "dest": "/api/server.js",
+      "methods": ["POST"]
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/index.html"
     }
   ]
 }
