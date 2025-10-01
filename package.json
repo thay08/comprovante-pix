@@ -1,9 +1,30 @@
 {
+  "name": "comprovante-pix",
+  "version": "1.0.0",
+  "description": "Sistema de comprovante PIX com captura de localização",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js",
+    "build": "echo 'Build completed'",
+    "test": "echo 'No tests specified'"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  },
   "dependencies": {
-    "body-parser": "^2.2.0",
+    "express": "^4.18.2",
+    "body-parser": "^1.20.2",
     "cors": "^2.8.5",
-    "dotenv": "^17.2.2",
-    "express": "^5.1.0",
-    "nodemailer": "^7.0.6"
-  }
+    "dotenv": "^16.3.1",
+    "nodemailer": "^6.9.7"
+  },
+  "keywords": [
+    "pix",
+    "comprovante",
+    "nodejs",
+    "express"
+  ],
+  "author": "Desenvolvedor",
+  "license": "MIT"
 }
